@@ -10,9 +10,9 @@ namespace SqlQueryGenerator.Operator
 {
     public class OperatorEqual : IOperator
     {
-        public string GenerateQuery(Column queryParam)
+        public string GenerateQuery(Column queryParameter)
         {
-            throw new NotImplementedException();
+            return $"{queryParameter.FieldName} = {queryParameter.FieldValue}";
         }
     }
 }

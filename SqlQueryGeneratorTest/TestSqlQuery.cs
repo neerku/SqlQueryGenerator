@@ -21,7 +21,7 @@ namespace SqlQueryGeneratorTest
             var queryGenerator = new QueryGenerator();
 
           var result=  queryGenerator.GenerateQuery(primaryTable);
-            Assert.IsTrue(string.Equals("Select * From Table1 Where column1 = 25", result) == true);
+            Assert.AreEqual("Select * From Table1 Where column1 = 25", result);
 
         }
     }

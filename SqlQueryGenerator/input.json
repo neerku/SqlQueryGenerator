@@ -1,5 +1,4 @@
 {
-  "PrimaryTable": {
     "Columns": [
       {
         "SqlOperator": "IN",
@@ -13,6 +12,6 @@
       }
     ],
     "Name": "Table1"
-  }
+  
 }
   

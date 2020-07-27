@@ -43,10 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IOperator.cs" />
     <Compile Include="Models\Column.cs" />
     <Compile Include="Models\PrimaryTable.cs" />
+    <Compile Include="OperatorFactory.cs" />
+    <Compile Include="Operator\OperatorEqual.cs" />
+    <Compile Include="Operator\OperatorIN.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

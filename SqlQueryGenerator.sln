@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlQueryGenerator", "SqlQueryGenerator\SqlQueryGenerator.csproj", "{69762CB9-7B9F-4A1F-B5E1-C88A0C9DA485}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlQueryGeneratorTest", "SqlQueryGeneratorTest\SqlQueryGeneratorTest.csproj", "{7B22C939-D765-4ED5-8EF8-1D0AF18E4603}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{69762CB9-7B9F-4A1F-B5E1-C88A0C9DA485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69762CB9-7B9F-4A1F-B5E1-C88A0C9DA485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69762CB9-7B9F-4A1F-B5E1-C88A0C9DA485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B22C939-D765-4ED5-8EF8-1D0AF18E4603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B22C939-D765-4ED5-8EF8-1D0AF18E4603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B22C939-D765-4ED5-8EF8-1D0AF18E4603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B22C939-D765-4ED5-8EF8-1D0AF18E4603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

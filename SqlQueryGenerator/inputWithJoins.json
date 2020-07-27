@@ -20,6 +20,12 @@
       "SecondaryTableName": "Table2",
       "PrimaryTableColumn": "column1",
       "JoinOnColumn": "column1"
+    },
+    {
+      "Type": "RIGHT JOIN",
+      "SecondaryTableName": "Table3",
+      "PrimaryTableColumn": "column4",
+      "JoinOnColumn": "column4"
     }
   ]
 }

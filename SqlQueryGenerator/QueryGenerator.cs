@@ -32,7 +32,23 @@ namespace SqlQueryGenerator
 
         public string GenerateJoinQuery(Query input)
         {
-            return "";
+            StringBuilder query = new StringBuilder("Select * from ");
+
+            if (input.Joins != null && input.Joins.Any())
+            {
+                query.Append(input.PrimaryTable.Name + " ");
+                for (int i = 0; i < input.Joins.Count(); i++)
+                {
+                    var join = input.Joins[i];
+
+                    var joinFactory = new JoinFactory();
+                    var JoinType = joinFactory.GetJoinOperator(join.Type);
+                    var generatedQuery = JoinType.GenerateJoinQuery(join, input.PrimaryTable.Name);
+
+                    query.Append(generatedQuery);
+                }
+            }
+            return query.ToString();
         }
     }
 }

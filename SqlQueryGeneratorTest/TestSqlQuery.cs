@@ -36,9 +36,10 @@ namespace SqlQueryGeneratorTest
                 Columns = new System.Collections.Generic.List<SqlQueryGenerator.Models.Column>()
             };
 
-            var query = new Query();
-            query.PrimaryTable = primaryTable;
-            query.Joins = new System.Collections.Generic.List<Join>()
+            var query = new Query
+            {
+                PrimaryTable = primaryTable,
+                Joins = new System.Collections.Generic.List<Join>()
             {
                 new Join
                 {
@@ -47,12 +48,13 @@ namespace SqlQueryGeneratorTest
                     SecondaryTableName="Table2",
                     PrimaryTableColumn="Column1"
                 }
+            }
             };
 
             var queryGenerator = new QueryGenerator();
 
             var result = queryGenerator.GenerateJoinQuery(query);
-            Assert.AreEqual("Select * from Table1 LEFT JOIN Table2 AS Table2 ON Table1.column1 = Table2.column1", result);
+            Assert.AreEqual("Select * from Table1  LEFT JOIN Table2 AS Table2 ON Table1.Column1 = Table2.Column1", result);
 
         }
     }

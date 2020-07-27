@@ -11,9 +11,9 @@ namespace SqlQueryGenerator.JoinOperator
     {
         public string GenerateJoinQuery(Join joinParam, string primaryTableName)
         {
-            return $"{joinParam.Type} {joinParam.SecondaryTableName} AS " +
+            return $" {joinParam.Type} {joinParam.SecondaryTableName} AS" +
                 $" {joinParam.SecondaryTableName} ON {primaryTableName}.{joinParam.JoinOnColumn}" +
-                $" = {joinParam.SecondaryTableName}.{joinParam.JoinOnColumn} ";
+                $" = {joinParam.SecondaryTableName}.{joinParam.JoinOnColumn}";
         }
 
     }

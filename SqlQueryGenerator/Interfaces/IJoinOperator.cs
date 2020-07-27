@@ -9,6 +9,6 @@ namespace SqlQueryGenerator.Interfaces
 {
    public interface IJoinOperator
     {
-        
+        string GenerateJoinQuery(Join joinParam, string primaryTableName);
     }
 }

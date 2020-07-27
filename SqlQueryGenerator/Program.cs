@@ -14,19 +14,26 @@ namespace SqlQueryGenerator
     {
         static void Main(string[] args)
         {
-            var inputJson = ReadJson();
+            var inputJson = ReadJson("input.json");
             var input = JsonConvert.DeserializeObject<PrimaryTable>(inputJson);
+            Console.WriteLine("************Output with Operators*******************");
             var queryGenerator = new QueryGenerator();
             var output = queryGenerator.GenerateQuery(input);
+            Console.WriteLine(output);
+
+            Console.WriteLine("************Output with JOINS*******************");
+            inputJson = ReadJson("inputWithJoins.json");
+            var inputWithJoins = JsonConvert.DeserializeObject<Query>(inputJson);
+            output = queryGenerator.GenerateJoinQuery(inputWithJoins);
             Console.WriteLine(output);
             Console.ReadLine();
         }
 
-        public static string ReadJson()
+        public static string ReadJson(string filePath)
         {
             var binDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var filePath = $"\\input.json";
-            var inputJson = File.ReadAllText(binDirectory + filePath);
+            var path = $"\\{filePath}";
+            var inputJson = File.ReadAllText(binDirectory + path);
             return inputJson;
         }
     }

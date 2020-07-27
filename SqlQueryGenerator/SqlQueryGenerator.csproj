@@ -46,9 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IJoinOperator.cs" />
     <Compile Include="Interfaces\IOperator.cs" />
+    <Compile Include="JoinOperator\LeftJoin.cs" />
+    <Compile Include="JoinOperator\RightJoin.cs" />
     <Compile Include="Models\Column.cs" />
+    <Compile Include="Models\Join.cs" />
     <Compile Include="Models\PrimaryTable.cs" />
+    <Compile Include="Models\Query.cs" />
     <Compile Include="OperatorFactory.cs" />
     <Compile Include="Operator\OperatorEqual.cs" />
     <Compile Include="Operator\OperatorIN.cs" />
@@ -58,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="inputWithJoins.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="input.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

@@ -29,5 +29,10 @@ namespace SqlQueryGenerator
             }
             return query.ToString();
         }
+
+        public string GenerateJoinQuery(Query input)
+        {
+            return "";
+        }
     }
 }

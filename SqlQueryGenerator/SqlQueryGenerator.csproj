@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Interfaces\IJoinOperator.cs" />
     <Compile Include="Interfaces\IOperator.cs" />
+    <Compile Include="JoinOperator\JoinOperator.cs" />
     <Compile Include="JoinOperator\LeftJoin.cs" />
     <Compile Include="JoinOperator\RightJoin.cs" />
     <Compile Include="Models\Column.cs" />

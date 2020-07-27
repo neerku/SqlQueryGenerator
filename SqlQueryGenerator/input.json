@@ -1,0 +1,18 @@
+{
+  "PrimaryTable": {
+    "Columns": [
+      {
+        "SqlOperator": "IN",
+        "FieldName": "column1",
+        "FieldValue": "value"
+      },
+      {
+        "SqlOperator": "Equal",
+        "FieldName": "column2",
+        "FieldValue": "value"
+      }
+    ],
+    "Name": "Table1"
+  }
+}
+  

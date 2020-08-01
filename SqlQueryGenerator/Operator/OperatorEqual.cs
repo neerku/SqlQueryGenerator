@@ -8,11 +8,13 @@ using SqlQueryGenerator.Models;
 
 namespace SqlQueryGenerator.Operator
 {
-    public class OperatorEqual : IOperator
+    public class OperatorEqual : Operator, IOperator
     {
         public string GenerateQuery(Column queryParameter)
         {
-            return $"{queryParameter.FieldName} = {queryParameter.FieldValue}";
+            var updatedValue = this.GetFieldValue(queryParameter);
+
+            return $"{queryParameter.FieldName} = {updatedValue.FieldValue}";
         }
     }
 }

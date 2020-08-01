@@ -3,12 +3,14 @@
       {
         "SqlOperator": "IN",
         "FieldName": "column1",
-        "FieldValue": "value"
+        "FieldValue": "1996-07-12 00:00:00.000",
+        "FieldType": "datetime"
       },
       {
         "SqlOperator": "Equal",
-        "FieldName": "column2",
-        "FieldValue": "value"
+        "FieldName": "personId",
+        "FieldValue": "c960e787-e043-44f8-bb43-033cfcf205c7",
+        "FieldType": "guid"
       }
     ],
     "Name": "Table1"

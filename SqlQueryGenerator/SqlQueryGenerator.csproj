@@ -57,6 +57,8 @@
     <Compile Include="Models\PrimaryTable.cs" />
     <Compile Include="Models\Query.cs" />
     <Compile Include="OperatorFactory.cs" />
+    <Compile Include="Operator\Operator.cs" />
+    <Compile Include="Operator\OperatorBetween.cs" />
     <Compile Include="Operator\OperatorEqual.cs" />
     <Compile Include="Operator\OperatorIN.cs" />
     <Compile Include="Program.cs" />

@@ -23,7 +23,7 @@ namespace SqlQueryGenerator.Operator
                     switch (queryParameter.FieldType)
                     {
                         case "int":
-                            output = queryParameter.FieldType;
+                            output = queryParameter.FieldValue;
                             break;
                         case "datetime":
                             output = DateTime.Parse(queryParameter.FieldValue).ToString("dd-MM-yyyy");
@@ -35,7 +35,9 @@ namespace SqlQueryGenerator.Operator
                         default:
                             break;
                     }
-                    value.Append(output + ";");
+                    value.Append(output);
+                    if (valueList.Count>1)
+                    value.Append(";");
                 }
 
                 queryParameter.FieldValue = value.ToString();

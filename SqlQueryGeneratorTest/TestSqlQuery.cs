@@ -16,7 +16,7 @@ namespace SqlQueryGeneratorTest
                 Name = "Table1",
                 Columns = new System.Collections.Generic.List<SqlQueryGenerator.Models.Column>() {
                     new SqlQueryGenerator.Models.Column {
-                    SqlOperator="Equal",FieldName="column1",FieldValue="25"
+                    SqlOperator="Equal",FieldName="column1",FieldValue="25",FieldType="int"
                     } }
             };
             var queryGenerator = new QueryGenerator();
